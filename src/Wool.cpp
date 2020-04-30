@@ -2,15 +2,16 @@
 #include <cmath>
 #include <string>
 #include "Wool.hpp"
+#include "sheep/circuit.hpp"
+#include "sheep/context.hpp"
+#include "sheep/context-clear.hpp"
 #include "AbstractExpr.h"
-#include "circuit.hpp"
 #include "CircuitCompositionVisitor.hpp"
 #include "Return.h"
 #include "Function.h"
 #include "MultDepthVisitor.h"
 #include "ParameterVisitor.hpp"
-#include "context.hpp"
-#include "context-clear.hpp"
+
 #ifdef HAVE_LP
 #include "context-lp.hpp"
 #endif

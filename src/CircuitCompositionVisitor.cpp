@@ -3,8 +3,8 @@
 //
 
 #include "CircuitCompositionVisitor.hpp"
-#include "simple-circuits.hpp"
-#include "circuit-util.hpp"
+#include "sheep/simple-circuits.hpp"
+#include "sheep/circuit-util.hpp"
 #include "LiteralBool.h"
 #include "LiteralInt.h"
 #include "LiteralString.h"

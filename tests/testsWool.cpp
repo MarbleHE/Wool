@@ -2,7 +2,7 @@
 // Created by mario on 17.02.20.
 //
 #include "gtest/gtest.h"
-#include "circuit.hpp"
+#include "sheep/circuit.hpp"
 #include "G.hpp"
 #include "Ast.h"
 #include "BatchingVisitor.hpp"

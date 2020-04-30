@@ -5,7 +5,7 @@
 #ifndef GRANITE_CIRCUITHELPERS_HPP
 #define GRANITE_CIRCUITHELPERS_HPP
 
-#include "circuit.hpp"
+#include "sheep/circuit.hpp"
 
 
 Circuit duplicatorCircuit();

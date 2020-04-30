@@ -10,9 +10,9 @@
 #include <variant>
 #include <map>
 #include "Visitor.h"
-#include "circuit.hpp"
+#include "sheep/circuit.hpp"
+#include "sheep/simple-circuits.hpp"
 #include "OpSymbEnum.h"
-#include "simple-circuits.hpp"
 #include "AbstractExpr.h"
 #include "AbstractBinaryExpr.h"
 #include "AbstractMatrix.h"

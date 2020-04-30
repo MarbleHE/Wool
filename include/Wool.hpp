@@ -7,8 +7,8 @@
 
 #include <string>
 #include "AbstractExpr.h"
-#include "circuit.hpp"
-#include "context.hpp"
+#include "sheep/circuit.hpp"
+#include "sheep/context.hpp"
 
 namespace Wool {
 class W;

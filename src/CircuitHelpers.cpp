@@ -3,9 +3,9 @@
 //
 
 #include "CircuitHelpers.hpp"
-#include "simple-circuits.hpp"
-#include "circuit-util.hpp"
-#include "circuit.hpp"
+#include "sheep/simple-circuits.hpp"
+#include "sheep/circuit-util.hpp"
+#include "sheep/circuit.hpp"
 
 Circuit duplicatorCircuit(){
     Circuit duplicator;
