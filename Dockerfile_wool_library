@@ -1,0 +1,13 @@
+FROM wool_base AS wool_library
+
+# Copy over relevant files and directories
+ADD src wool/src
+ADD cmake wool/cmake
+ADD CMakeLists.txt wool/CMakeLists.txt
+ADD WoolConfig.cmake.in wool/WoolConfig.cmake.in
+ADD include wool/include
+ADD tests wool/tests
+
+RUN rm -fr wool/build; mkdir wool/build
+
+RUN cd wool/build; export CC=gcc-9; export CXX=g++-9; cmake ../; make -j8; make install

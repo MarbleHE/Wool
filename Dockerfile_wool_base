@@ -1,0 +1,5 @@
+FROM marblehe/sheep_library AS wool_base
+
+###### build and install ast_optimizer
+RUN git clone https://github.com/MarbleHE/AST-Optimizer.git
+RUN cd AST-Optimizer; export CC=gcc-9; export CXX=g++-9 ; cmake .; make -j8; make install
