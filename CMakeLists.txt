@@ -5,6 +5,12 @@ set(CMAKE_CXX_STANDARD 17)
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_LIST_DIR}/cmake/Modules")
 
 ####################################################################################
+## Dependencies
+####################################################################################
+find_package(Sheep REQUIRED)
+find_package(ast_opt REQUIRED)
+
+####################################################################################
 ## Build wool library
 ####################################################################################
 set(SOURCE_FILES
@@ -16,28 +22,25 @@ set(SOURCE_FILES
         src/MultCountVisitor.cpp
         src/ParameterVisitor.cpp)
 
-
-
+set(PUBLIC_HEADERS
+        include/BatchingVisitor.hpp
+        include/CircuitCompositionVisitor.hpp
+        include/CircuitHelpers.hpp
+        include/MultCountVisitor.hpp
+        include/OpCountVisitor.hpp
+        include/ ParameterVisitor.hpp
+        include/Wool.hpp)
 
 add_library(wool ${SOURCE_FILES})
+add_library(Wool::wool ALIAS wool)
+target_include_directories(wool PUBLIC include)
+set_target_properties(wool PROPERTIES PUBLIC_HEADER ${PUBLIC_HEADERS})
 
-target_include_directories(wool PUBLIC
-        include
-        ../Granite/lib/ast/include/ast
-        ../Granite/lib/ast/include/visitor
-        ../Granite/lib/ast/include/optimizer
-        ../Granite/lib/ast/include/utilities )
-
-find_package(Sheep REQUIRED)
-target_link_libraries(wool
-        Sheep::sheep
-        ast_lib)
+target_link_libraries(wool Sheep::sheep ast_opt::ast_opt)
 
 ####################################################################################
 ## Wool testing
 ####################################################################################
-
-# Disabled this guard until Granite & Wool are split into separate projects
 if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
     enable_testing()
     include(CTest)
@@ -46,4 +49,4 @@ endif()
 if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME AND BUILD_TESTING)
     include(GoogleTest)
     add_subdirectory(tests)
-endif() #same as above - guard disabled until projects split
+endif()
