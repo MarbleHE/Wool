@@ -49,5 +49,5 @@ endif()
 
 if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME AND BUILD_TESTING)
     include(GoogleTest)
-    add_subdirectory(tests)
+    add_subdirectory(tests EXCLUDE_FROM_ALL)
 endif()
