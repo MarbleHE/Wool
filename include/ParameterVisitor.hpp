@@ -5,16 +5,16 @@
 #ifndef GRANITE_PARAMETERVISITOR_HPP
 #define GRANITE_PARAMETERVISITOR_HPP
 
-#include "Visitor.h"
-#include "Dimension.h"
-#include "LiteralInt.h"
-#include "Matrix.h"
-#include "LogicalExpr.h"
-#include "UnaryExpr.h"
-#include "AbstractBinaryExpr.h"
-#include "ArithmeticExpr.h"
-#include "AbstractExpr.h"
-#include "OpSymbEnum.h"
+#include "ast_opt/visitor/Visitor.h"
+#include "ast_opt/ast/Dimension.h"
+#include "ast_opt/ast/LiteralInt.h"
+#include "ast_opt/ast/Matrix.h"
+#include "ast_opt/ast/LogicalExpr.h"
+#include "ast_opt/ast/UnaryExpr.h"
+#include "ast_opt/ast/AbstractBinaryExpr.h"
+#include "ast_opt/ast/ArithmeticExpr.h"
+#include "ast_opt/ast/AbstractExpr.h"
+#include "ast_opt/ast/OpSymbEnum.h"
 
 class ParameterVisitor: Visitor {
 private:

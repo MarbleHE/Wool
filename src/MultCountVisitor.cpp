@@ -3,9 +3,9 @@
 //
 
 #include "MultCountVisitor.hpp"
-#include "AbstractExpr.h"
-#include "ArithmeticExpr.h"
-#include "OpSymbEnum.h"
+#include "ast_opt/ast/AbstractExpr.h"
+#include "ast_opt/ast/ArithmeticExpr.h"
+#include "ast_opt/ast/OpSymbEnum.h"
 
 int MultCountVisitor::getMultCount() {
     return this->multCount;

@@ -6,7 +6,7 @@
 #define GRANITE_WOOL_HPP
 
 #include <string>
-#include "AbstractExpr.h"
+#include "ast_opt/ast/AbstractExpr.h"
 #include "sheep/circuit.hpp"
 #include "sheep/context.hpp"
 

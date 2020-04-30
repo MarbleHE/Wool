@@ -4,10 +4,10 @@
 
 #include "OpCountVisitor.hpp"
 
-#include "LogicalExpr.h"
-#include "UnaryExpr.h"
-#include "AbstractBinaryExpr.h"
-#include "ArithmeticExpr.h"
+#include "ast_opt/ast/LogicalExpr.h"
+#include "ast_opt/ast/UnaryExpr.h"
+#include "ast_opt/ast/AbstractBinaryExpr.h"
+#include "ast_opt/ast/ArithmeticExpr.h"
 
 int OpCountVisitor::getOpCount() {
     return this->opcount;

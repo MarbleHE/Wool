@@ -5,12 +5,12 @@
 #ifndef GRANITE_OPCOUNTVISITOR_HPP
 #define GRANITE_OPCOUNTVISITOR_HPP
 
-#include "Visitor.h"
+#include "ast_opt/visitor/Visitor.h"
 
-#include "LogicalExpr.h"
-#include "UnaryExpr.h"
-#include "AbstractBinaryExpr.h"
-#include "ArithmeticExpr.h"
+#include "ast_opt/ast/LogicalExpr.h"
+#include "ast_opt/ast/UnaryExpr.h"
+#include "ast_opt/ast/AbstractBinaryExpr.h"
+#include "ast_opt/ast/ArithmeticExpr.h"
 
 class OpCountVisitor : Visitor {
 private:

@@ -2,11 +2,11 @@
 // Created by mario on 08.03.20.
 //
 #include <cmath>
-#include "AbstractExpr.h"
 #include "BatchingVisitor.hpp"
-#include "Dimension.h"
-#include "LiteralInt.h"
-#include "Matrix.h"
+#include "ast_opt/ast/AbstractExpr.h"
+#include "ast_opt/ast/Dimension.h"
+#include "ast_opt/ast/LiteralInt.h"
+#include "ast_opt/ast/Matrix.h"
 
 void BatchingVisitor::visit(AbstractExpr &elem) {
     elem.accept(*this);

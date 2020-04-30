@@ -5,14 +5,14 @@
 
 #include <cmath>
 #include "ParameterVisitor.hpp"
-#include "Dimension.h"
-#include "LiteralInt.h"
-#include "Matrix.h"
-#include "LogicalExpr.h"
-#include "UnaryExpr.h"
-#include "ArithmeticExpr.h"
-#include "AbstractExpr.h"
-#include "OpSymbEnum.h"
+#include "ast_opt/ast/Dimension.h"
+#include "ast_opt/ast/LiteralInt.h"
+#include "ast_opt/ast/Matrix.h"
+#include "ast_opt/ast/LogicalExpr.h"
+#include "ast_opt/ast/UnaryExpr.h"
+#include "ast_opt/ast/ArithmeticExpr.h"
+#include "ast_opt/ast/AbstractExpr.h"
+#include "ast_opt/ast/OpSymbEnum.h"
 
 
 int ParameterVisitor::getMultCount() {

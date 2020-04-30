@@ -1,7 +1,6 @@
 cmake_minimum_required(VERSION 3.8)
 project(Wool VERSION 0.1)
 
-set(CMAKE_CXX_STANDARD 17)
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_LIST_DIR}/cmake/Modules")
 
 ####################################################################################
@@ -28,15 +27,17 @@ set(PUBLIC_HEADERS
         include/CircuitHelpers.hpp
         include/MultCountVisitor.hpp
         include/OpCountVisitor.hpp
-        include/ ParameterVisitor.hpp
+        include/ParameterVisitor.hpp
         include/Wool.hpp)
 
 add_library(wool ${SOURCE_FILES})
 add_library(Wool::wool ALIAS wool)
-target_include_directories(wool PUBLIC include)
+target_link_libraries(wool PUBLIC Sheep::sheep ast_opt::ast_opt)
+target_include_directories(wool PUBLIC
+        $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include>
+        $<INSTALL_INTERFACE:include>)
 set_target_properties(wool PROPERTIES PUBLIC_HEADER ${PUBLIC_HEADERS})
-
-target_link_libraries(wool Sheep::sheep ast_opt::ast_opt)
+target_compile_features(wool PUBLIC cxx_std_17)
 
 ####################################################################################
 ## Wool testing

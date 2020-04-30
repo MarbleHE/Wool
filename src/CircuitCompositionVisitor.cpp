@@ -3,22 +3,22 @@
 //
 
 #include "CircuitCompositionVisitor.hpp"
+#include "CircuitHelpers.hpp"
 #include "sheep/simple-circuits.hpp"
 #include "sheep/circuit-util.hpp"
-#include "LiteralBool.h"
-#include "LiteralInt.h"
-#include "LiteralString.h"
-#include "LiteralFloat.h"
-#include "LogicalExpr.h"
-#include "UnaryExpr.h"
-#include "AbstractBinaryExpr.h"
-#include "ArithmeticExpr.h"
-#include "Function.h"
-#include "AbstractMatrix.h"
-#include "Rotate.h"
-#include "Dimension.h"
-#include "CircuitHelpers.hpp"
-#include "Matrix.h"
+#include "ast_opt/ast/LiteralBool.h"
+#include "ast_opt/ast/LiteralInt.h"
+#include "ast_opt/ast/LiteralString.h"
+#include "ast_opt/ast/LiteralFloat.h"
+#include "ast_opt/ast/LogicalExpr.h"
+#include "ast_opt/ast/UnaryExpr.h"
+#include "ast_opt/ast/AbstractBinaryExpr.h"
+#include "ast_opt/ast/ArithmeticExpr.h"
+#include "ast_opt/ast/Function.h"
+#include "ast_opt/ast/AbstractMatrix.h"
+#include "ast_opt/ast/Rotate.h"
+#include "ast_opt/ast/Dimension.h"
+#include "ast_opt/ast/Matrix.h"
 
 using namespace std;
 
@@ -114,7 +114,7 @@ void CircuitCompositionVisitor::visit(UnaryExpr &elem) {
   auto r = cs.top();
   cs.pop();
 
-  Circuit gateCircuit = toGateCircuit(elem.getOp()->getOperatorSymbol());
+  Circuit gateCircuit = toGateCircuit(elem.getOperator()->getOperatorSymbol());
 
   cs.push(seq(r, gateCircuit));
 }

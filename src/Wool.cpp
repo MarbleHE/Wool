@@ -2,15 +2,15 @@
 #include <cmath>
 #include <string>
 #include "Wool.hpp"
+#include "CircuitCompositionVisitor.hpp"
+#include "ParameterVisitor.hpp"
 #include "sheep/circuit.hpp"
 #include "sheep/context.hpp"
 #include "sheep/context-clear.hpp"
-#include "AbstractExpr.h"
-#include "CircuitCompositionVisitor.hpp"
-#include "Return.h"
-#include "Function.h"
-#include "MultDepthVisitor.h"
-#include "ParameterVisitor.hpp"
+#include "ast_opt/ast/AbstractExpr.h"
+#include "ast_opt/visitor/MultDepthVisitor.h"
+#include "ast_opt/ast/Return.h"
+#include "ast_opt/ast/Function.h"
 
 #ifdef HAVE_LP
 #include "context-lp.hpp"

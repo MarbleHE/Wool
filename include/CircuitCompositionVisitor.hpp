@@ -9,15 +9,15 @@
 #include <stack>
 #include <variant>
 #include <map>
-#include "Visitor.h"
 #include "sheep/circuit.hpp"
 #include "sheep/simple-circuits.hpp"
-#include "OpSymbEnum.h"
-#include "AbstractExpr.h"
-#include "AbstractBinaryExpr.h"
-#include "AbstractMatrix.h"
-#include "Rotate.h"
-#include "Matrix.h"
+#include "ast_opt/visitor/Visitor.h"
+#include "ast_opt/ast/OpSymbEnum.h"
+#include "ast_opt/ast/AbstractExpr.h"
+#include "ast_opt/ast/AbstractBinaryExpr.h"
+#include "ast_opt/ast/AbstractMatrix.h"
+#include "ast_opt/ast/Rotate.h"
+#include "ast_opt/ast/Matrix.h"
 
 class CircuitCompositionVisitor : Visitor {
  private:
