@@ -25,7 +25,7 @@ elseif ("${CMAKE_C_COMPILER_ID}" MATCHES "(Apple)?[Cc]lang" OR "${CMAKE_CXX_COMP
     set(CMAKE_CXX_FLAGS "-fprofile-instr-generate -fcoverage-mapping")
 endif ()
 
-target_link_libraries(testsWool
+target_link_libraries(testsWool PRIVATE
         wool
         gtest
         gtest_main

@@ -38,7 +38,7 @@ set_target_properties(wool PROPERTIES PUBLIC_HEADER ${PUBLIC_HEADERS})
 target_compile_features(wool PUBLIC cxx_std_17)
 
 ####################################################################################
-## wool installation
+## Wool installation
 ##
 ## wool installed globally as a library
 ####################################################################################
